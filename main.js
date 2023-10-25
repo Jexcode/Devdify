@@ -24,23 +24,24 @@ li.forEach(function(link){
 
 // faq
 
-const faqList = document.querySelectorAll(".faq-question");
+const faqList = document.querySelectorAll(".faq-item");
 const faqAns = document.querySelectorAll(".faq-ans");
 const faqAngle = document.querySelectorAll("fa-angle-down");
 
- faqAns.forEach(function(ans) {
-  ans.classList.add("ds-none")
-});
 
-
-faqList.forEach(function (item, index){
-  item.addEventListener('click',()=> {  
-    let currentIndex = index;
-    
-  faqAns[currentIndex].classList.toggle("ds-none");
- 
+faqList.forEach(function (list){
+  const question = list.querySelector('.faq-question');
+  
+question.addEventListener('click', ()=>{
+  
+  faqList.forEach(function (item){
+    if (item !== list) {
+      item.classList.remove('show-ans');
+    }
   });
   
-});
+  list.classList.toggle('show-ans');
+})
+})
 
 // console.log(faqList[0]);
