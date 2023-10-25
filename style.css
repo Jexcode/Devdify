@@ -32,7 +32,6 @@
 }
 
 html, body{
-  height: 100%;
   font-size: var(--body-text-100);
 }
 
@@ -42,6 +41,7 @@ body {
   color: var(--neutral-clr-900);
   font-family: var(--font-body);
   font-weight: 400;
+  height: 100%;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -616,10 +616,21 @@ h4 {
   color: var(--primary-clr);
   font-size: 1.2rem;
 }
+.faq .fa-angle-up{
+  display: none;
+}
 
-.faq .faq-text .faq-item:nth-child(3) .faq-question .fa-solid{
-  transform: rotate(180deg);
-  color: red;
+
+.faq .show-ans .faq-ans{
+  display: block;
+}
+
+.faq .show-ans .fa-angle-down{
+  display: none;
+}
+
+.faq .show-ans .fa-angle-up{
+  display: block;
 }
 
 .faq .faq-text .faq-item .faq-ans{
@@ -686,8 +697,12 @@ h4 {
 /* footer */
 
 .footer{
-  margin-block: 50px 100px;
+  margin-block: 2rem 1rem;
   gap: 10px;
+}
+
+.footer .glow{
+  color: var(--primary-clr);
 }
 
 .footer .ft-links{
@@ -696,6 +711,13 @@ h4 {
   width: 30%;
 }
 
+.footer a:hover{
+  color: var(--secondary-clr);
+}
+
+footer {
+padding-bottom: 1rem;
+}
 /* footer ends */
 
 /* desktop */
@@ -875,7 +897,7 @@ h4 {
     font-size: var(--body-text-700);
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
   
   .footer .ft-links{
