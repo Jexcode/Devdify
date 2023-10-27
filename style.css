@@ -612,17 +612,32 @@ h4 {
   padding: 15px;
 }
 
+.faq .faq-con .faq-text .faq-item .faq-ans{
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 1rem;
+  transition: 
+              padding .65s ease-in-out .01s,
+              max-height .65s ease-in-out;
+}
+
 .faq .faq-text .faq-item .faq-question .fa-solid{
   color: var(--primary-clr);
   font-size: 1.2rem;
+  transition: display .95s ease;
 }
 .faq .fa-angle-up{
   display: none;
 }
 
+.faq .fa-angle-down{
+  transition: animation .5s ease-in-out;
+}
 
-.faq .show-ans .faq-ans{
-  display: block;
+
+.faq .faq-con .faq-text .show-ans .faq-ans{
+  max-height: 200px;
+  padding-bottom: 1rem;
 }
 
 .faq .show-ans .fa-angle-down{
